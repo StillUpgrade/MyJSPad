@@ -1,7 +1,10 @@
 <?php
+include "database.php";
 include "connexion.php";
 include "inscription.php";
+
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Accueil</title>
@@ -27,7 +30,7 @@ include "inscription.php";
         <span class="buttonspaninscri" >o</span>
         <span class="buttonspaninscri" >n</span>
         <span class="buttonspaninscri" >n</span>
-        <span class="buttonspaninscri" ><</span>
+        <span class="buttonspaninscri" >< </span>
     </p>
     <form action="index.php" method="post">
         <input type="text" name="login" placeholder="Nom d'utilisateur" class="username" value="<?php if (isset($_POST['login'])) echo htmlentities(trim($_POST['login'])); ?>"><br />
@@ -37,7 +40,7 @@ include "inscription.php";
         <?php
         if (isset($erreur)) echo '<br />',$erreur;
         ?>
-        <input type="submit" value="S'inscrire" class="inscrire"><br />
+        <input type="submit" name="inscription" value="S'inscrire" class="inscrire"/><br />
     </form>
 </div>
 <div class="connexion">
@@ -58,7 +61,7 @@ include "inscription.php";
         <input type="text" name="login" placeholder="Nom d'utilisateur" class="username" value="<?php if (isset($_POST['login'])) echo htmlentities(trim($_POST['login'])); ?>"><br />
         <input type="password" name="pass" placeholder="Mot de passe" class="password" value="<?php if (isset($_POST['pass'])) echo htmlentities(trim($_POST['pass'])); ?>"><br />
         <a href="/home.php" style="text-decoration:none">
-        <input type="submit" value="Connexion" class="connecter"><br />
+        <input type="submit" value="Connexion" name="connexion" class="connecter"><br />
             </a>
         <?php
         if (isset($erreur)) echo '<br /><br />',$erreur;

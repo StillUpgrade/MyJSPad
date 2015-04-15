@@ -5,15 +5,19 @@
  * Date: 19/03/2015
  * Time: 15:17
  */
+include "database.php";
 
+
+session_start();
 if (isset($_SESSION['login']) && $_SESSION['login'] != '') {
 
-
-        $base = mysqli_connect('localhost', 'root', 'root');
+    echo ("bonjour ".$_SESSION['login']);
+    $database = new database;
+    $base = $database->get_db();
         mysqli_select_db($base, 'myjspad_membre');
 
         // on teste si une entrée de la base contient ce couple  / pass
-        $sql = 'SELECT count(*) FROM membre_pseudo WHERE membre_pseudo="' . mysqli_escape_string($base, $_POST['login']) . '"';
+        $sql = 'SELECT count(*) FROM identifiant_membre WHERE membre_pseudo="' . mysqli_escape_string($base, $_SESSION['login']) . '"';
         $req = mysqli_query($base, $sql) or die('Erreur SQL !<br />' . $sql . '<br />' . mysqli_error($base));
         $data = mysqli_fetch_array($req);
 
@@ -23,10 +27,8 @@ if (isset($_SESSION['login']) && $_SESSION['login'] != '') {
         // si on obtient une réponse, alors l'utilisateur est un membre
         if ($data[0] == 1) {
 
-            $req = 'SELECT isverified FROM membre_seudo WHERE membre_pseudo="'. mysqli_escape_string($base, $_POST['login']) .'"';
-            session_start();
+            $req = 'SELECT is_verified FROM identifiant_membre WHERE membre_pseudo="'. mysqli_escape_string($base, $_SESSION['login']) .'"';
             $_SESSION['login'] = $_POST['login'];
-            header('Location: /home.php');
             exit();
         } // si on ne trouve aucune réponse, le visiteur s'est trompé soit dans son login , soit dans son mot de passe
         elseif ($data[0] == 0) {

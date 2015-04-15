@@ -1,0 +1,1 @@
+installer l'apk sur un smartphone android [activer les sources non vérifiées]
