@@ -1,0 +1,22 @@
+Windows:
+
+- Run AioServer3.4.2.jar
+- Or Run AioServer3.4.2.bat
+- Or Run AioServer3.4.2.exe
+
+Linux:
+- Run AioServer3.4.2.jar
+- Or Run AioServer3.4.2.sh
+
+Mac:
+- Run AioServer3.4.2.jar
+
+
+For any issue:
+- support@aioremote.net
+- @aioremote on twitter
+
+Note: App may crash on Mountain Lion due to some issues with Bluetooth. Open config.ini file and set bluetoothEnabled=false
+
+
+Note: make sure that you have Java runtime.

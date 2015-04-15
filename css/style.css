@@ -1,0 +1,105 @@
+.inscription{
+	background-color: #337AB7;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: -15%;
+	-webkit-box-shadow: 10px 0 6px 0 rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    10px 0 6px 0 rgba(50, 50, 50, 0.75);
+	box-shadow: 10px 0 6px 0 rgba(50, 50, 50, 0.75);
+	z-index: 2;
+	float: left;
+}
+.connexion{
+	background-color: #8EA2C6;
+	height: 100%;
+	width: 100%;
+	left: 85%;
+	float: left;
+	position: absolute;
+	-webkit-box-shadow: -10px 0 6px 0 rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    -10px 0 6px 0 rgba(50, 50, 50, 0.75);
+	box-shadow: -10px 0 6px 0 rgba(50, 50, 50, 0.75);
+}
+
+.buttonco{
+  	-webkit-transform: rotate(90deg);
+	-webkit-transform-origin: left top 0;
+  	position: relative;
+  	left:20px;
+  	top:20%;
+}
+
+.buttonspanco{
+  	-webkit-transform: rotate(-90deg);
+	-webkit-transform-origin: left top 0;
+  	display:inline-block;
+  	text-shadow: 0 1px 1px #4d4d4d;
+	color: #222;
+	font: 80px 'LeagueGothicRegular';
+	font-size: 30px;
+	text-align: left;
+	letter-spacing: 10px;
+}
+
+.buttoninscri{
+	-webkit-transform: rotate(90deg);
+	-webkit-transform-origin: left top 0;
+  	position: relative;
+  	left: 95%;
+  	top:18%;
+  	visibility: hidden;
+}
+
+.buttonspaninscri{
+  	-webkit-transform: rotate(-90deg);
+	-webkit-transform-origin: left top 0;
+  	display:inline-block;
+  	text-shadow: 0 1px 1px #4d4d4d;
+	color: #222;
+	font: 80px 'LeagueGothicRegular';
+	font-size: 30px;
+	text-align: right;
+	letter-spacing: 10px;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	background-color: yellow;
+	margin : 0;
+	overflow-y: hidden;
+}
+
+H1{
+	text-shadow: 0 1px 1px #4d4d4d;
+	color: #222;
+	font: 80px 'LeagueGothicRegular';
+	font-size: 30px;
+	text-align: center;
+}
+
+form{
+	text-align: center;
+}
+.username,
+.password,
+.mail{
+	padding: 10px;
+	border: solid 1px #dcdcdc;
+	transition: box-shadow 0.3s, border 0.3s;
+}
+
+.username:focus,
+.password:focus,
+.mail:focus{
+border: solid 5px #969696;
+}
+
+.inscrire,.connecter{
+
+	border : solid 2px #525252;
+	font-size : 18px;
+	color : #000000;
+	padding : 7px 16px;
+}
